@@ -325,13 +325,13 @@ AOS.init({
 
   function makeTimer() {
 
-    var endTime = new Date("25 January 2020 15:00:00 GMT+05:30");
-    endTime = (Date.parse(endTime) / 1000);
+    var startTime = new Date("25 January 2020 15:00:00 GMT+05:30");
+    startTime = (Date.parse(startTime) / 1000);
 
     var now = new Date();
     now = (Date.parse(now) / 1000);
 
-    var timeLeft = endTime - now;
+    var timeLeft = now - startTime;
 
     var days = Math.floor(timeLeft / 86400);
     var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
